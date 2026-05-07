@@ -18,7 +18,7 @@ registerBtn.addEventListener("click", function() {
     alert("Redirecting to Register Page...");
 });
 
-/* dashboard */
+/* register */
 const loginForm = document.getElementById("loginForm");
 const registerBtn = document.getElementById("registerBtn");
 
