@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoWise Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+        <img src="logo.png" alt="Logo">
+        <h1>Eco Wise</h1>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <h2>Maps</h2>
+        <select>
+            <option>Sankanan</option>
+            <option>Maluko</option>
+            <option>Dicklum</option>
+            <option>Kalugmana</option>
+            <option>Tankulan</option>
+            <option>San Miguel</option>
+            <option>Lingion</option>
+            <option>Maluko</option>
+            <option>Lindaban</option>
+            <option>Alae</option>
+        </select>
+
+        <h2>Set Day</h2>
+        <select>
+            <option>Monday</option>
+            <option>Tuesday</option>
+            <option>Wednesday</option>
+            <option>Thursday</option>
+            <option>Friday</option>
+            <option>Saturday</option>
+            <option>Sunday</option>
+        </select>
+
+        <h2>Target</h2>
+        <select>
+            <option>♻ Recyclable Waste</option>
+            <option>Biodegradable</option>
+            <option>Non Biodegradable</option>
+        </select>
+
+        <h2>Important</h2>
+        <select>
+            <option>Priority</option>
+            <option>Non Priority</option>
+        </select>
+
+        <button id="setBtn">Set</button>
+
+        <button id="logoutBtn" class="logout">Logout</button>
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <h2>List of task</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Location</th>
+                    <th>Day</th>
+                    <th>Target</th>
+                    <th>Importance</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody id="taskTable">
+            </tbody>
+        </table>
+
+        <div class="buttons">
+            <button id="doneBtn">Done</button>
+            <button id="deleteBtn">Delete</button>
+            <button id="moveBtn">Move</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
