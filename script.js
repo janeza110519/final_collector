@@ -1,96 +1,133 @@
+/* ================= LOGIN PAGE ================= */
+
 const loginForm = document.getElementById("loginForm");
 const registerBtn = document.getElementById("registerBtn");
 
-loginForm.addEventListener("submit", function(event) {
-    event.preventDefault();
+if(registerBtn){
 
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+    registerBtn.addEventListener("click", function() {
 
-    if(username === "admin" && password === "1234") {
-        alert("Login Successful!");
-    } else {
-        alert("Invalid Username or Password");
-    }
-});
+        window.location.href = "register.html";
 
-registerBtn.addEventListener("click", function() {
-    alert("Redirecting to Register Page...");
-});
+    });
+}
 
-/* register */
-const loginForm = document.getElementById("loginForm");
-const registerBtn = document.getElementById("registerBtn");
+if(loginForm){
 
-loginForm.addEventListener("submit", function(event) {
-    event.preventDefault();
+    loginForm.addEventListener("submit", function(event) {
 
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+        event.preventDefault();
 
-    if(username === "admin" && password === "1234") {
-        alert("Login Successful!");
-    } else {
-        alert("Invalid Username or Password");
-    }
-});
+        const usernameInput =
+            document.getElementById("Username") ||
+            document.getElementById("username");
 
-registerBtn.addEventListener("click", function() {
-    alert("Redirecting to Register Page...");
-});
+        const password =
+            document.getElementById("password").value;
 
-/* dashboard */
+        const username = usernameInput.value;
+
+        if(username === "admin" && password === "1234") {
+
+            alert("Login Successful!");
+
+            // OPTIONAL:
+            // window.location.href = "dashboard.html";
+
+        } else {
+
+            alert("Invalid Username or Password");
+
+        }
+
+    });
+}
+
+
+/* ================= REGISTER PAGE ================= */
+
+const backBtn = document.getElementById("backBtn");
+
+if(backBtn){
+
+    backBtn.addEventListener("click", function() {
+
+        window.location.href = "login.html";
+
+    });
+
+}
+
+
+/* ================= DASHBOARD PAGE ================= */
+
 const setBtn = document.getElementById("setBtn");
-const taskTable = document.getElementById("taskTable");
 
-const selects = document.querySelectorAll("select");
+if(setBtn){
 
-setBtn.addEventListener("click", () => {
+    const taskTable = document.getElementById("taskTable");
 
-    const location = selects[0].value;
-    const day = selects[1].value;
-    const target = selects[2].value;
-    const importance = selects[3].value;
+    const selects = document.querySelectorAll("select");
 
-    const row = document.createElement("tr");
+    setBtn.addEventListener("click", () => {
 
-    row.innerHTML = `
-        <td>${location}</td>
-        <td>${day}</td>
-        <td>${target}</td>
-        <td>${importance}</td>
-        <td>Pending</td>
-    `;
+        const location = selects[0].value;
+        const day = selects[1].value;
+        const target = selects[2].value;
+        const importance = selects[3].value;
 
-    taskTable.appendChild(row);
-});
+        const row = document.createElement("tr");
 
-/* DONE BUTTON */
-document.getElementById("doneBtn").addEventListener("click", () => {
+        row.innerHTML = `
+            <td>${location}</td>
+            <td>${day}</td>
+            <td>${target}</td>
+            <td>${importance}</td>
+            <td>Pending</td>
+        `;
 
-    const rows = taskTable.querySelectorAll("tr");
+        taskTable.appendChild(row);
 
-    if(rows.length > 0){
-        rows[rows.length - 1].cells[4].innerText = "Done";
-    }
-});
+    });
 
-/* DELETE BUTTON */
-document.getElementById("deleteBtn").addEventListener("click", () => {
+    /* DONE BUTTON */
+    document.getElementById("doneBtn").addEventListener("click", () => {
 
-    const rows = taskTable.querySelectorAll("tr");
+        const rows = taskTable.querySelectorAll("tr");
 
-    if(rows.length > 0){
-        rows[rows.length - 1].remove();
-    }
-});
+        if(rows.length > 0){
 
-/* MOVE BUTTON */
-document.getElementById("moveBtn").addEventListener("click", () => {
-    alert("Task moved successfully!");
-});
+            rows[rows.length - 1].cells[4].innerText = "Done";
 
-/* LOGOUT BUTTON */
-document.getElementById("logoutBtn").addEventListener("click", () => {
-    alert("Logging out...");
-});
+        }
+
+    });
+
+    /* DELETE BUTTON */
+    document.getElementById("deleteBtn").addEventListener("click", () => {
+
+        const rows = taskTable.querySelectorAll("tr");
+
+        if(rows.length > 0){
+
+            rows[rows.length - 1].remove();
+
+        }
+
+    });
+
+    /* MOVE BUTTON */
+    document.getElementById("moveBtn").addEventListener("click", () => {
+
+        alert("Task moved successfully!");
+
+    });
+
+    /* LOGOUT BUTTON */
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+
+        alert("Logging out...");
+
+    });
+
+}
