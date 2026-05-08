@@ -3,35 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoWise - Garbage Collection Login</title>
+    <title>EcoWise - Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="auth-container">
-        <div class="left-panel">
-            <img src="logo.png" alt="EcoWise Logo">
-            <h1>EcoWise</h1>
-            <p>Garbage Collection Management System</p>
-        </div>
-
-        <div class="right-panel">
-            <form id="loginForm">
-                <h2>Login</h2>
-                <label>Username</label>
-                <input type="text" id="username" required>
-
-                <label>Password</label>
-                <input type="password" id="password" required>
-
-                <div class="buttons">
-                    <button type="submit">Login</button>
-                    <button type="button" id="registerBtn">Register</button>
-                </div>
-
-            </form>
-        </div>
-        
+<div class="auth-container">
+    <div class="left-panel">
+        <img src="logo.png" alt="Logo">
+        <h1>EcoWise</h1>
+        <p>Garbage Collection Management</p>
     </div>
-    <script src="script.js"></script>
+    <div class="right-panel">  
+        <form id="loginForm">  
+            <h2>Login</h2>  
+            <label>Username</label>  
+            <input type="text" id="username" required>  
+
+            <label>Password</label>  
+            <input type="password" id="password" required>  
+
+            <div class="buttons">  
+                <button type="submit">Login</button>  
+                <button type="button" id="registerBtn">Register</button>  
+            </div>  
+        </form>  
+    </div>      
+</div>  
+<script src="script.js"></script>
 </body>
 </html>
