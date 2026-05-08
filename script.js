@@ -108,7 +108,7 @@ if (loginForm) {
     const registerBtn = document.getElementById("registerBtn");
     
     registerBtn?.addEventListener("click", () => {
-        window.location.href = "register.html";
+        window.location.href = "register.php";
     });
 
     loginForm.addEventListener("submit", (e) => {
@@ -122,7 +122,7 @@ if (loginForm) {
             localStorage.setItem("isLoggedIn", "true");
             localStorage.setItem("loggedInUsername", username);
             localStorage.setItem("loggedInFullName", user.fullname);
-            window.location.href = "dashboard.html";
+            window.location.href = "dashboard.php";
         } else {
             alert("Invalid credentials!");
         }
@@ -147,11 +147,11 @@ if (registerForm) {
 
         db.createUser(fullname, username, password);
         alert("Registration successful! Please login.");
-        window.location.href = "login.html";
+        window.location.href = "login.php";
     });
 
     backBtn?.addEventListener("click", () => {
-        window.location.href = "login.html";
+        window.location.href = "login.php";
     });
 }
 
@@ -159,7 +159,7 @@ if (registerForm) {
 if (document.getElementById("taskTable")) {
     // Protect access
     if (!isLoggedIn()) {
-        window.location.href = "login.html";
+        window.location.href = "login.php";
         throw new Error("Unauthorized access");
     }
 
@@ -441,7 +441,7 @@ if (document.getElementById("taskTable")) {
         localStorage.removeItem("isLoggedIn");
         localStorage.removeItem("loggedInUsername");
         localStorage.removeItem("loggedInFullName");
-        window.location.href = "login.html";
+        window.location.href = "login.php";
     }
 
     // Modal close on outside click

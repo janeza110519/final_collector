@@ -9,7 +9,7 @@
 <body>
     <div class="auth-container">
         <div class="left-panel">
-            <img src="https://via.placeholder.com/180x180/006d6d/ffffff?text=EcoWise" alt="EcoWise Logo">
+            <img src="logo.png" alt="EcoWise Logo">
             <h1>EcoWise</h1>
             <p>Garbage Collection Management System</p>
         </div>

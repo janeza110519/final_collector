@@ -11,7 +11,7 @@
 <div class="container">
     <!-- Header -->
     <div class="header">
-        <img src="https://via.placeholder.com/44x44/006d6d/ffffff?text=Eco" alt="Logo">
+        <img src="logo.png" alt="Logo">
         <h1>EcoWise Dashboard</h1>
         <div class="user-info">
             <span id="welcomeUser">Welcome, Guest</span>
